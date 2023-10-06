@@ -16,22 +16,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center"
+        android:gravity="left"
         android:padding="28dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/location_icon" />
+            android:src="@drawable/arrow_back" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Unilocal"
-            android:textStyle="bold"
-            android:fontFamily="sans-serif-medium"
-            android:textSize="32sp"
-            android:textColor="@color/white" />
+
 
 
     </LinearLayout>
@@ -49,11 +42,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="28dp">
-            
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Bienvenido"
+                android:text="Registrarse"
                 android:textColor="@color/color_text"
                 android:textSize="32sp"
                 android:textStyle="bold"/>
@@ -61,19 +54,39 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Por favor inicia sesion con tu informacion."
+                android:text="Por favor ingresa tus datos personales para crear una cuenta y asi disfrutar de nuestros beneficios."
                 android:alpha="0.7"/>
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre de usuario"
+                android:text="Nombre"
+                android:alpha="0.7"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/editText_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correo"
                 android:alpha="0.7"
                 android:textStyle="bold"
                 />
             <EditText
+                android:id="@+id/editText_eamil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"/>
@@ -90,9 +103,14 @@
                 android:textStyle="bold"/>
 
             <EditText
+                android:id="@+id/editText_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,14 +120,14 @@
                 android:padding="18dp">
 
 
-                <TextView
+                <CheckBox
+                    android:id="@+id/checkbox_moderador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Olvidaste tu contrasena?"
+                    android:text="Moderador?"
                     android:textStyle="bold"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="sans-serif-medium" />
 
-                     />
 
 
             </LinearLayout>
@@ -118,9 +136,10 @@
                 android:layout_height="10dp"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Iniciar sesion"
+                android:text="Registrarse"
                 app:cornerRadius="32dp"/>
 
         </LinearLayout>
